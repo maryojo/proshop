@@ -8,7 +8,9 @@
       "type": "registry:component",
       "title": "Hello World",
       "description": "A simple hello world component",
-      "registryDependencies": ["button"],
+      "registryDependencies": [
+        "button"
+      ],
       "files": [
         {
           "path": "registry/new-york/blocks/hello-world/hello-world.tsx",
@@ -21,8 +23,16 @@
       "type": "registry:component",
       "title": "Example Form",
       "description": "A contact form with Zod validation.",
-      "dependencies": ["zod"],
-      "registryDependencies": ["button", "input", "label", "textarea", "card"],
+      "dependencies": [
+        "zod"
+      ],
+      "registryDependencies": [
+        "button",
+        "input",
+        "label",
+        "textarea",
+        "card"
+      ],
       "files": [
         {
           "path": "registry/new-york/blocks/example-form/example-form.tsx",
@@ -35,7 +45,9 @@
       "type": "registry:component",
       "title": "Complex Component",
       "description": "A complex component showing hooks, libs and components.",
-      "registryDependencies": ["card"],
+      "registryDependencies": [
+        "card"
+      ],
       "files": [
         {
           "path": "registry/new-york/blocks/complex-component/page.tsx",
@@ -72,6 +84,58 @@
         },
         {
           "path": "registry/new-york/blocks/example-with-css/example-card.css",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "product-grid",
+      "type": "registry:component",
+      "title": "Product Grid",
+      "description": "A stylish product grid with hover interactions.",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/product-grid/product-grid.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/new-york/blocks/product-grid/product-card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "product-card",
+      "type": "registry:component",
+      "title": "Product Card",
+      "description": "A standalone modern product card with hover actions.",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/product-grid/product-card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "product-card-brutalist",
+      "type": "registry:component",
+      "title": "Brutalist Product Card",
+      "description": "A high-contrast, bold brutalist product card design.",
+      "registryDependencies": [
+        "button",
+        "card"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/product-grid/product-card-brutalist.tsx",
           "type": "registry:component"
         }
       ]
