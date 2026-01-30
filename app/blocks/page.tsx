@@ -27,7 +27,7 @@ export default function BlocksPage() {
           <div className="flex flex-col gap-4">
             <h1 className="text-4xl font-bold tracking-tight">Blocks</h1>
             <p className="text-xl text-muted-foreground">
-              A collection of beautiful, handcrafted ecommerce blocks.
+              A collection of beautiful, handcrafted UI blocks.
             </p>
           </div>
           <NicheSwitcher current={niche} onSelect={setNiche} />
@@ -55,7 +55,7 @@ export default function BlocksPage() {
           <BlockViewer 
             title="Product Grid" 
             name="product-grid" 
-            description={`A stylish product grid optimized for ${niche} ecommerce.`}
+            description={`A stylish responsive grid with ${niche} styling.`}
             className="lg:col-span-2"
           >
             <ProductGrid products={products} />

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ShoppingBag, Github, Twitter, Instagram } from "lucide-react"
+import { Sparkles, Github, Twitter, Instagram } from "lucide-react"
 
 export function SiteFooter() {
   return (
@@ -9,12 +9,12 @@ export function SiteFooter() {
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-6">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-lg shadow-primary/20">
-                <ShoppingBag className="h-6 w-6" />
+                <Sparkles className="h-6 w-6" />
               </div>
-              <span className="text-2xl font-black tracking-tighter uppercase">Shopkit</span>
+              <span className="text-2xl font-black tracking-tighter uppercase">Crisp UI</span>
             </Link>
             <p className="text-muted-foreground leading-relaxed">
-              Premium ecommerce building blocks for modern developers. Built with precision and passion.
+              Premium UI building blocks for modern developers. Built with precision and passion.
             </p>
           </div>
           
@@ -31,7 +31,7 @@ export function SiteFooter() {
           <div>
             <h4 className="font-bold mb-6 uppercase tracking-wider text-xs">Project</h4>
             <ul className="space-y-4 text-muted-foreground">
-              <li><a href="https://github.com/shadcn/shadcn-shopkit" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors flex items-center gap-2"><Github className="h-4 w-4" /> GitHub</a></li>
+              <li><a href="https://github.com/crisp-ui/crisp-ui" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors flex items-center gap-2"><Github className="h-4 w-4" /> GitHub</a></li>
               <li><a href="#" className="hover:text-primary transition-colors flex items-center gap-2"><Twitter className="h-4 w-4" /> Twitter</a></li>
               <li><a href="#" className="hover:text-primary transition-colors flex items-center gap-2"><Instagram className="h-4 w-4" /> Instagram</a></li>
             </ul>
@@ -49,7 +49,7 @@ export function SiteFooter() {
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border/50 gap-4">
           <div className="text-muted-foreground">
-            © {new Date().getFullYear()} Shopkit. Project by <a href="#" className="font-bold text-foreground">Acme Corp</a>.
+            © {new Date().getFullYear()} Crisp UI. Built with ❤️ by the community.
           </div>
           <div className="flex gap-8 text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">Privacy</a>

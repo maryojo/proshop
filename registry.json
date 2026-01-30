@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "acme",
-  "homepage": "https://acme.com",
+  "name": "crisp-ui",
+  "homepage": "https://crisp-ui.com",
   "items": [
     {
       "name": "hello-world",
@@ -69,6 +69,33 @@
         {
           "path": "registry/new-york/blocks/complex-component/hooks/use-pokemon.ts",
           "type": "registry:hook"
+        }
+      ]
+    },
+    {
+      "name": "login-template",
+      "type": "registry:component",
+      "title": "Login Template",
+      "description": "A modern login page with glassmorphism and interactive particle background.",
+      "dependencies": [
+        "@tsparticles/react",
+        "@tsparticles/slim"
+      ],
+      "registryDependencies": [
+        "button",
+        "card",
+        "input",
+        "label"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/blocks/login-template/page.tsx",
+          "type": "registry:page",
+          "target": "app/login/page.tsx"
+        },
+        {
+          "path": "registry/new-york/blocks/login-template/particles-background.tsx",
+          "type": "registry:component"
         }
       ]
     },

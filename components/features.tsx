@@ -24,7 +24,7 @@ const features = [
   },
   {
     title: "Mobile Optimized",
-    description: "Ecommerce happens on the go. Our blocks are designed for touch-first interfaces and various screen sizes.",
+    description: "Touch-first interfaces designed for various screen sizes. Our blocks work beautifully on any device.",
     icon: Smartphone,
     color: "text-purple-500",
     bg: "bg-purple-500/10"
@@ -52,7 +52,7 @@ export function Features() {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 uppercase">Everything you need</h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            We've thought of everything so you don't have to. High-quality blocks designed for real-world ecommerce needs.
+            We've thought of everything so you don't have to. High-quality blocks designed for real-world applications.
           </p>
         </div>
         

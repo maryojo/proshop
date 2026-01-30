@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/registry/new-york/ui/button"
-import { ArrowRight, ShoppingBag } from "lucide-react"
+import { ArrowRight, Sparkles } from "lucide-react"
 
 export function CTA() {
   return (
@@ -11,16 +11,16 @@ export function CTA() {
       <div className="container mx-auto px-4">
         <div className="relative rounded-[3rem] bg-foreground text-background p-8 sm:p-16 overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 p-8 opacity-10">
-            <ShoppingBag className="h-40 w-40 rotate-12" />
+            <Sparkles className="h-40 w-40 rotate-12" />
           </div>
           
           <div className="max-w-2xl relative z-10">
             <h2 className="text-4xl sm:text-5xl font-black tracking-tight mb-6">
               Ready to build your <br />
-              <span className="text-primary">next-gen store?</span>
+              <span className="text-primary">next project?</span>
             </h2>
             <p className="text-xl text-background/70 mb-10 leading-relaxed">
-              Join hundreds of developers building fast, beautiful, and high-converting ecommerce experiences with Shopkit.
+              Join hundreds of developers building fast, beautiful, and modern user interfaces with Crisp UI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="rounded-2xl h-14 px-8 text-lg font-bold group" asChild>
@@ -29,7 +29,7 @@ export function CTA() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="rounded-2xl h-14 px-8 text-lg font-bold border-background/20 bg-background/5 hover:bg-background/10 text-background" asChild>
-                <a href="https://github.com/shadcn/shadcn-shopkit" target="_blank" rel="noreferrer">
+                <a href="https://github.com/crisp-ui/crisp-ui" target="_blank" rel="noreferrer">
                   Star on GitHub
                 </a>
               </Button>

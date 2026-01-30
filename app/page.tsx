@@ -39,7 +39,7 @@ export default function Home() {
               <div className="h-1 w-20 bg-primary rounded-full mb-4"></div>
               <h2 className="text-4xl font-black tracking-tight sm:text-5xl">Browse Registry</h2>
               <p className="text-muted-foreground text-lg max-w-2xl">
-                A carefully curated selection of modular, copy-paste components optimized for high-conversion ecommerce stores.
+                A carefully curated selection of modular, copy-paste components for building beautiful modern applications.
               </p>
             </div>
             <div className="mb-16">
@@ -51,7 +51,7 @@ export default function Home() {
             <BlockViewer 
               title="Product Grid" 
               name="product-grid" 
-              description={`A stylish product grid optimized for ${niche} ecommerce.`}
+              description={`A stylish product grid with ${niche} styling.`}
               className="lg:col-span-2"
             >
               <ProductGrid products={products} />

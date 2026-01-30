@@ -18,8 +18,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Shopkit | Shadcn Ecommerce Blocks",
-  description: "A specialized collection of shadcn/ui components designed specifically for ecommerce.",
+  title: "Crisp UI | Modern UI Blocks Library",
+  description: "A modern collection of beautifully designed, accessible UI blocks built with shadcn/ui. Copy, paste, and customize for any project.",
 };
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dmSans.variable} antialiased font-[family-name:var(--font-dm-sans)]`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dmSans.variable} antialiased font-(family-name:--font-dm-sans)`}
       >
         {children}
       </body>

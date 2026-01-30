@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ShoppingBag, Github } from "lucide-react"
+import { Sparkles, Github } from "lucide-react"
 import { Button } from "@/registry/new-york/ui/button"
 
 export function SiteHeader() {
@@ -9,9 +9,9 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-              <ShoppingBag className="h-5 w-5" />
+              <Sparkles className="h-5 w-5" />
             </div>
-            <span className="text-xl font-bold tracking-tight">Shopkit</span>
+            <span className="text-xl font-bold tracking-tight">Crisp UI</span>
           </Link>
           <nav className="hidden md:ml-6 md:flex md:gap-4 lg:gap-6">
             <Link href="/blocks" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
@@ -27,7 +27,7 @@ export function SiteHeader() {
         </div>
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://github.com/shadcn/shadcn-shopkit" target="_blank" rel="noreferrer">
+            <a href="https://github.com/crisp-ui/crisp-ui" target="_blank" rel="noreferrer">
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </a>
