@@ -3,20 +3,9 @@ import { ShoppingCart, Heart, Share2, Star } from "lucide-react"
 import { Button } from "@/registry/new-york/ui/button"
 import { Card, CardContent } from "@/registry/new-york/ui/card"
 import { cn } from "@/lib/utils"
+import { type Product } from "./product-data"
 
-interface Product {
-  id: number
-  name: string
-  price: string
-  originalPrice?: string
-  image: string
-  rating: number
-  reviews: number
-  isNew?: boolean
-  discount?: string
-}
-
-const product: Product = {
+const defaultProduct: Product & { originalPrice?: string; rating: number; reviews: number; isNew?: boolean; discount?: string } = {
   id: 1,
   name: "Premium Wireless Noise Cancelling Headphones",
   price: "$299.00",
@@ -25,10 +14,15 @@ const product: Product = {
   rating: 4.8,
   reviews: 124,
   isNew: true,
-  discount: "15% OFF"
+  discount: "15% OFF",
+  category: "Electronics"
 }
 
-export function ProductCardBrutalist() {
+interface ProductCardBrutalistProps {
+  product?: Product & { originalPrice?: string; rating?: number; reviews?: number; isNew?: boolean; discount?: string }
+}
+
+export function ProductCardBrutalist({ product = defaultProduct }: ProductCardBrutalistProps) {
   return (
     <Card className="group relative w-full max-w-sm overflow-hidden border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
       <div className="relative aspect-square overflow-hidden border-b-2 border-black">
@@ -68,10 +62,10 @@ export function ProductCardBrutalist() {
           {[...Array(5)].map((_, i) => (
             <Star 
               key={i} 
-              className={cn("h-4 w-4 fill-current", i >= Math.floor(product.rating) && "text-neutral-200")} 
+              className={cn("h-4 w-4 fill-current", i >= Math.floor(product.rating || 0) && "text-neutral-200")} 
             />
           ))}
-          <span className="ml-1 text-xs font-bold text-black">({product.reviews})</span>
+          <span className="ml-1 text-xs font-bold text-black">({product.reviews || 0})</span>
         </div>
 
         <h3 className="line-clamp-2 text-xl font-black leading-tight tracking-tight uppercase">

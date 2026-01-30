@@ -20,7 +20,7 @@ export function Hero() {
           </div>
           
           <h1 className="text-5xl font-black tracking-tight sm:text-7xl mb-8 bg-linear-to-br from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent leading-[1.1]">
-            Build Modern Storefronts with 
+            Build Storefronts with 
             <span className="text-primary block sm:inline ml-0 sm:ml-4 relative">
               Ecommerce Blocks
               <svg className="absolute -bottom-2 left-0 w-full h-3 text-primary/30" viewBox="0 0 200 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,9 +37,9 @@ export function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-5 mb-24">
-            <Button size="lg" className="rounded-2xl px-10 h-14 text-lg shadow-xl shadow-primary/20 hover:shadow-primary/30 transition-all font-bold" asChild>
+            <Button size="lg" className="rounded-2xl px-10 h-14 text-lg shadow-xl shadow-primary/20 hover:shadow-primary/30 transition-all font-bold group" asChild>
               <Link href="/blocks">
-                Explore Components <ArrowRight className="ml-2 h-5 w-5" />
+                Explore Components <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="rounded-2xl px-10 h-14 text-lg backdrop-blur-sm border-2 font-bold" asChild>

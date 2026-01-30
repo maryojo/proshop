@@ -1,31 +1,36 @@
+"use client"
+
+import * as React from "react"
+import { useState } from "react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { BlockViewer } from "@/components/block-viewer"
+import { NicheSwitcher } from "@/components/niche-switcher"
+import { productPresets, type ProductNiche } from "@/registry/new-york/blocks/product-grid/product-data"
 import { HelloWorld } from "@/registry/new-york/blocks/hello-world/hello-world"
 import { ExampleForm } from "@/registry/new-york/blocks/example-form/example-form"
 import { ExampleCard } from "@/registry/new-york/blocks/example-with-css/example-card"
 import { ProductGrid } from "@/registry/new-york/blocks/product-grid/product-grid"
-import { ProductCardBrutalist } from "@/registry/new-york/blocks/product-grid/product-card-brutalist"
 import { ProductCard } from "@/registry/new-york/blocks/product-grid/product-card"
+import { ProductCardBrutalist } from "@/registry/new-york/blocks/product-grid/product-card-brutalist"
 
 export default function BlocksPage() {
-  const sampleProduct = {
-    id: 1,
-    name: "Classic Leather Boots",
-    price: "$129.00",
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&h=800&auto=format&fit=crop",
-    category: "Footwear"
-  }
+  const [niche, setNiche] = useState<ProductNiche>("general")
+  const products = productPresets[niche]
+  const sampleProduct = products[0]
 
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1 container mx-auto px-4 py-12">
-        <div className="flex flex-col gap-4 mb-12">
-          <h1 className="text-4xl font-bold tracking-tight">Blocks</h1>
-          <p className="text-xl text-muted-foreground">
-            A collection of beautiful, handcrafted ecommerce blocks.
-          </p>
+        <div className="flex flex-col gap-6 mb-12">
+          <div className="flex flex-col gap-4">
+            <h1 className="text-4xl font-bold tracking-tight">Blocks</h1>
+            <p className="text-xl text-muted-foreground">
+              A collection of beautiful, handcrafted ecommerce blocks.
+            </p>
+          </div>
+          <NicheSwitcher current={niche} onSelect={setNiche} />
         </div>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
@@ -34,7 +39,7 @@ export default function BlocksPage() {
             name="product-card-brutalist" 
             description="A bold, high-contrast product card with neo-brutalist styling."
           >
-            <ProductCardBrutalist />
+            <ProductCardBrutalist product={sampleProduct} />
           </BlockViewer>
 
           <BlockViewer 
@@ -50,10 +55,10 @@ export default function BlocksPage() {
           <BlockViewer 
             title="Product Grid" 
             name="product-grid" 
-            description="A stylish product grid with hover interactions and card actions."
+            description={`A stylish product grid optimized for ${niche} ecommerce.`}
             className="lg:col-span-2"
           >
-            <ProductGrid />
+            <ProductGrid products={products} />
           </BlockViewer>
 
           <BlockViewer 

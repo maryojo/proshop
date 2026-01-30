@@ -1,19 +1,28 @@
+"use client"
+
 import * as React from "react"
+import { useState } from "react"
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { TechStack } from "@/components/tech-stack"
 import { BlockViewer } from "@/components/block-viewer"
 import { SiteFooter } from "@/components/site-footer"
+import { NicheSwitcher } from "@/components/niche-switcher"
+import { productPresets, type ProductNiche } from "@/registry/new-york/blocks/product-grid/product-data"
 import { HelloWorld } from "@/registry/new-york/blocks/hello-world/hello-world"
 import { ExampleForm } from "@/registry/new-york/blocks/example-form/example-form"
-import PokemonPage from "@/registry/new-york/blocks/complex-component/page"
 import { ExampleCard } from "@/registry/new-york/blocks/example-with-css/example-card"
 import { ProductGrid } from "@/registry/new-york/blocks/product-grid/product-grid"
+import { ProductCardBrutalist } from "@/registry/new-york/blocks/product-grid/product-card-brutalist"
 
 import { CTA } from "@/components/cta"
 import { Features } from "@/components/features"
 
 export default function Home() {
+  const [niche, setNiche] = useState<ProductNiche>("general")
+  const products = productPresets[niche]
+  const sampleProduct = products[0]
+
   return (
     <div className="flex min-h-screen flex-col ">
       <SiteHeader />
@@ -33,16 +42,19 @@ export default function Home() {
                 A carefully curated selection of modular, copy-paste components optimized for high-conversion ecommerce stores.
               </p>
             </div>
+            <div className="mb-16">
+              <NicheSwitcher current={niche} onSelect={setNiche} />
+            </div>
           </div>
           
           <div className="container mx-auto px-4 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
             <BlockViewer 
               title="Product Grid" 
               name="product-grid" 
-              description="A stylish product grid with hover interactions and card actions."
+              description={`A stylish product grid optimized for ${niche} ecommerce.`}
               className="lg:col-span-2"
             >
-              <ProductGrid />
+              <ProductGrid products={products} />
             </BlockViewer>
 
             <BlockViewer 
@@ -62,14 +74,11 @@ export default function Home() {
             </BlockViewer>
 
             <BlockViewer 
-              title="Complex Dashboard" 
-              name="complex-component" 
-              description="A multi-part component featuring hooks, libs, and custom UI."
-              className="lg:col-span-2"
+              title="Brutalist Card" 
+              name="product-card-brutalist" 
+              description="A bold, high-contrast product card with neo-brutalist styling."
             >
-              <div className="w-full max-w-4xl max-h-[600px] overflow-auto border rounded-xl bg-background p-4 sm:p-8">
-                <PokemonPage />
-              </div>
+              <ProductCardBrutalist product={sampleProduct} />
             </BlockViewer>
 
             <BlockViewer 
