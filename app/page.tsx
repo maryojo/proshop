@@ -58,14 +58,6 @@ export default function Home() {
             </BlockViewer>
 
             <BlockViewer 
-              title="Hello World" 
-              name="hello-world" 
-              description="A simple hello world component starting point."
-            >
-              <HelloWorld />
-            </BlockViewer>
-
-            <BlockViewer 
               title="Contact Form" 
               name="example-form" 
               description="A professional contact form with Zod validation."
@@ -79,14 +71,6 @@ export default function Home() {
               description="A bold, high-contrast product card with neo-brutalist styling."
             >
               <ProductCardBrutalist product={sampleProduct} />
-            </BlockViewer>
-
-            <BlockViewer 
-              title="Styled Login Card" 
-              name="example-with-css" 
-              description="A login interface utilizing custom CSS modules for unique styling."
-            >
-              <ExampleCard />
             </BlockViewer>
           </div>
         </section>

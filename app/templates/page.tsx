@@ -1,7 +1,7 @@
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { BlockViewer } from "@/components/block-viewer"
-import PokemonPage from "@/registry/new-york/blocks/complex-component/page"
+import PokemonPage from "@/registry/new-york/blocks/example-complex-component/page"
 import LoginTemplate from "@/registry/new-york/blocks/login-template/page"
 
 export default function TemplatesPage() {
