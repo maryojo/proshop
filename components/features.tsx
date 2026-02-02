@@ -52,7 +52,7 @@ export function Features() {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 uppercase">Everything you need</h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            We've thought of everything so you don't have to. High-quality blocks designed for real-world applications.
+            We&apos;ve thought of everything so you don&apos;t have to. High-quality blocks designed for real-world applications.
           </p>
         </div>
         

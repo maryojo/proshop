@@ -40,7 +40,7 @@ export default function TemplatesPage() {
           <div className="rounded-3xl border border-dashed p-20 flex flex-col items-center justify-center text-center gap-4 bg-muted/20">
             <h3 className="text-xl font-semibold text-muted-foreground">More Templates Coming Soon</h3>
             <p className="text-sm text-muted-foreground max-w-xs">
-              We're working on full-page Dashboard, Landing Page, and SaaS templates.
+              We&apos;re working on full-page Dashboard, Landing Page, and SaaS templates.
             </p>
           </div>
         </div>
