@@ -48,7 +48,7 @@ export default function TemplatesPage() {
   const [selectedTemplateId, setSelectedTemplateId] = React.useState(templates[0].id)
   const selectedTemplate = React.useMemo(
     () => templates.find((t) => t.id === selectedTemplateId) || templates[0],
-    [selectedTemplateId]
+    [selectedTemplateId, templates]
   )
 
   const groupedTemplates = React.useMemo(() => {
@@ -60,7 +60,7 @@ export default function TemplatesPage() {
       groups[template.category].push(template)
     })
     return groups
-  }, [])
+  }, [templates])
 
   return (
     <div className="flex min-h-screen flex-col bg-slate-50/50 dark:bg-slate-950/50">

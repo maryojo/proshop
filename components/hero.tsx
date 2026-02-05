@@ -1,8 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/registry/new-york/ui/button"
 import { ArrowRight, Layers, Layout, Zap } from "lucide-react"
-import { GridBackground } from "./grid-background"
-import { HeroDesignElements } from "./hero-design-elements"
 
 export function Hero() {
   return (

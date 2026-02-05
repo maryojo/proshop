@@ -1,6 +1,6 @@
 "use client"
 
-import { Activity, Bell, Check, Search, TrendingUp, Users, Zap, MoreHorizontal } from "lucide-react"
+import { Activity, Check, Search, TrendingUp, Users, Zap, MoreHorizontal } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export function HeroDesignElements({ className }: { className?: string }) {

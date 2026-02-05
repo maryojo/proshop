@@ -1,19 +1,22 @@
+import * as React from "react"
 import PokemonPage from "@/registry/new-york/blocks/example-complex-component/page"
 import LoginTemplate from "@/registry/new-york/blocks/login-template/page"
 
 interface TemplatePageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
-export default function TemplatePage({ params }: TemplatePageProps) {
+export default async function TemplatePage({ params }: TemplatePageProps) {
+  const { id } = await params
+  
   const templates: { [key: string]: React.ReactNode } = {
     "login-template": <LoginTemplate />,
     "complex-component": <PokemonPage />,
   }
 
-  const content = templates[params.id]
+  const content = templates[id]
 
   if (!content) {
     return (

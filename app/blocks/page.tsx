@@ -84,7 +84,7 @@ export default function BlocksPage() {
   const [selectedBlockId, setSelectedBlockId] = React.useState(blocks[0].id)
   const selectedBlock = React.useMemo(() => 
     blocks.find((b) => b.id === selectedBlockId) || blocks[0],
-    [selectedBlockId]
+    [selectedBlockId, blocks]
   )
 
   const groupedBlocks = React.useMemo(() => {
@@ -96,7 +96,7 @@ export default function BlocksPage() {
       groups[block.category].push(block)
     })
     return groups
-  }, [])
+  }, [blocks])
 
   const handleCopyBlock = async (blockId: string) => {
     const block = blocks.find((b) => b.id === blockId)

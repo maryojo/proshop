@@ -20,7 +20,7 @@ export function CTA() {
               <span className="text-primary">online store?</span>
             </h2>
             <p className="text-xl text-background/70 mb-10 leading-relaxed">
-              Join hundreds of developers building storefronts, marketplaces, and commerce SaaS platforms with ProShop's UI blocks.
+              Join hundreds of developers building storefronts, marketplaces, and commerce SaaS platforms with ProShop&apos;s UI blocks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="rounded-2xl h-14 px-8 text-lg font-bold group" asChild>

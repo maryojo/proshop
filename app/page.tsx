@@ -10,7 +10,6 @@ import { productPresets, type ProductNiche } from "@/registry/new-york/blocks/pr
 import { ExampleForm } from "@/registry/new-york/blocks/example-form/example-form"
 import { ProductGrid } from "@/registry/new-york/blocks/product-grid/product-grid"
 import { ProductCardBrutalist } from "@/registry/new-york/blocks/product-grid/product-card-brutalist"
-import { ArrowRight, Layers, Layout, Zap } from "lucide-react"
 
 
 import { CTA } from "@/components/cta"
