@@ -18,8 +18,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Crisp UI | Modern UI Blocks Library",
-  description: "A modern collection of beautifully designed, accessible UI blocks built with shadcn/ui. Copy, paste, and customize for any project.",
+  title: "ProShop | Ecommerce & SaaS UI Blocks",
+  description: "Complete UI blocks for ecommerce websites, marketplaces, and commerce SaaS platforms. From storefronts to admin dashboards, vendor portals to analytics panels. Built on shadcn/ui.",
 };
 
 export default function RootLayout({

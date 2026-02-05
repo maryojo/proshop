@@ -2,8 +2,8 @@ import { ShieldCheck, Zap, Scissors, Smartphone, Palette, Globe } from "lucide-r
 
 const features = [
   {
-    title: "Performance First",
-    description: "Built for speed. Optimized images, lean code, and Next.js 15 features ensure your store loads in milliseconds.",
+    title: "Conversion Optimized",
+    description: "Built to convert. Every component is designed with ecommerce best practices to maximize sales and reduce cart abandonment.",
     icon: Zap,
     color: "text-amber-500",
     bg: "bg-amber-500/10"
@@ -16,15 +16,15 @@ const features = [
     bg: "bg-emerald-500/10"
   },
   {
-    title: "Tailwind v4",
-    description: "The first registry built from the ground up for the latest Tailwind release. Faster builds and smaller bundles.",
+    title: "Product Displays",
+    description: "Stunning product cards, grids, and galleries. Showcase your products with beautiful layouts that drive engagement.",
     icon: Scissors,
     color: "text-blue-500",
     bg: "bg-blue-500/10"
   },
   {
-    title: "Mobile Optimized",
-    description: "Touch-first interfaces designed for various screen sizes. Our blocks work beautifully on any device.",
+    title: "Shopping Ready",
+    description: "Complete shopping experiences. Product pages, carts, checkout flows, and order confirmations ready to customize.",
     icon: Smartphone,
     color: "text-purple-500",
     bg: "bg-purple-500/10"
@@ -52,7 +52,7 @@ export function Features() {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4 uppercase">Everything you need</h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            We&apos;ve thought of everything so you don&apos;t have to. High-quality blocks designed for real-world applications.
+            We&apos;ve thought of everything so you don&apos;t have to. High-quality blocks for storefronts, marketplaces, and commerce SaaS platforms.
           </p>
         </div>
         

@@ -1,6 +1,6 @@
-# Crisp UI
+# ProShop
 
-A modern, general-purpose UI blocks library built with shadcn/ui. Crisp UI provides beautifully designed, accessible components that you can copy and paste into your projects.
+A modern ecommerce and marketplace UI blocks library built on shadcn/ui. ProShop provides beautifully designed, accessible components for customer-facing storefronts, marketplaces, and the SaaS platforms that power the commerce industry. Copy and paste into your projects.
 
 You can use the `shadcn` CLI to run your own component registry. Running your own
 component registry allows you to distribute your custom components, hooks, pages, and
@@ -11,7 +11,7 @@ other files to any React project.
 
 ## Getting Started
 
-This is a custom registry built with Next.js, featuring a curated collection of UI blocks for modern web applications.
+This is a custom registry built with Next.js, featuring a curated collection of UI blocks for ecommerce websites, marketplaces, and commerce SaaS applications.
 
 - The registry uses a `registry.json` file to define components and their files.
 - The `shadcn build` command is used to build the registry.

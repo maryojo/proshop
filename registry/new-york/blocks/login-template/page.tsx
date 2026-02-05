@@ -10,7 +10,7 @@ import Image from "next/image"
 
 export default function LoginPage() {
   return (
-    <div className="dark relative min-h-screen w-full flex items-center justify-end overflow-hidden bg-background text-foreground">
+    <div className="dark relative w-full h-full flex items-center justify-end overflow-hidden bg-background text-foreground">
       <ParticlesBackground />
       
       <div className="z-10 w-full px-20 py-12 flex items-center justify-center gap-28 ">

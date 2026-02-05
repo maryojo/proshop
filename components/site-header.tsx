@@ -11,9 +11,9 @@ export function SiteHeader() {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
               <Sparkles className="h-5 w-5" />
             </div>
-            <span className="text-xl font-bold tracking-tight">Crisp UI</span>
+            <span className="text-xl font-bold tracking-tight">ProShop</span>
           </Link>
-          <nav className="hidden md:ml-6 md:flex md:gap-4 lg:gap-6">
+          <nav className="hidden md:ml-6 md:flex md:gap-4 lg:gap-6 rounded-xl">
             <Link href="/blocks" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
               Blocks
             </Link>
@@ -27,7 +27,7 @@ export function SiteHeader() {
         </div>
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://github.com/crisp-ui/crisp-ui" target="_blank" rel="noreferrer">
+            <a href="https://github.com/maryojo/shadcn-shopkit" target="_blank" rel="noreferrer">
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </a>
