@@ -1,6 +1,5 @@
-import Link from "next/link"
 import { Button } from "@/registry/new-york/ui/button"
-import { ArrowRight, ShoppingBag, ShoppingBasket, ShoppingCart } from "lucide-react"
+import { ShoppingCart } from "lucide-react"
 
 export function CTA() {
   return (

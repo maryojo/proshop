@@ -9,46 +9,47 @@ import PokemonPage from "@/registry/new-york/blocks/example-complex-component/pa
 import LoginTemplate from "@/registry/new-york/blocks/login-template/page"
 import { ChevronRight, LogIn, Grid3x3, Zap, ExternalLink } from "lucide-react"
 
-export default function TemplatesPage() {
-  const templates = [
-    {
-      id: "login-template",
-      title: "Login Page",
-      category: "Authentication",
-      description: "A modern login page with glassmorphism and interactive particle background.",
-      icon: <LogIn className="h-4 w-4" />,
-      fullPageUrl: "/template/login-template",
-      content: (
-        <div className="w-full max-w-5xl border rounded-2xl overflow-hidden shadow-xl">
-          <LoginTemplate />
-        </div>
-      ),
-    },
-    {
-      id: "complex-component",
-      title: "Search & Filter",
-      category: "E-Commerce",
-      description: "A comprehensive template featuring search, interactive cards, and state management.",
-      icon: <Grid3x3 className="h-4 w-4" />,
-      fullPageUrl: "/template/complex-component",
-      content: (
-        <div className="w-full max-w-5xl max-h-[800px] overflow-auto border rounded-2xl bg-background p-4 sm:p-8">
-          <PokemonPage />
-        </div>
-      ),
-    },
-  ]
+const templates = [
+  {
+    id: "login-template",
+    title: "Login Page",
+    category: "Authentication",
+    description: "A modern login page with glassmorphism and interactive particle background.",
+    icon: <LogIn className="h-4 w-4" />,
+    fullPageUrl: "/template/login-template",
+    content: (
+      <div className="w-full max-w-5xl border rounded-2xl overflow-hidden shadow-xl">
+        <LoginTemplate />
+      </div>
+    ),
+  },
+  {
+    id: "complex-component",
+    title: "Search & Filter",
+    category: "E-Commerce",
+    description: "A comprehensive template featuring search, interactive cards, and state management.",
+    icon: <Grid3x3 className="h-4 w-4" />,
+    fullPageUrl: "/template/complex-component",
+    content: (
+      <div className="w-full max-w-5xl max-h-[800px] overflow-auto border rounded-2xl bg-background p-4 sm:p-8">
+        <PokemonPage />
+      </div>
+    ),
+  },
+]
 
-  const upcomingTemplates = [
-    { title: "Dashboard", icon: <Grid3x3 className="h-4 w-4" /> },
-    { title: "Landing Page", icon: <Zap className="h-4 w-4" /> },
-    { title: "SaaS Template", icon: <Zap className="h-4 w-4" /> },
-  ]
+const upcomingTemplates = [
+  { title: "Dashboard", icon: <Grid3x3 className="h-4 w-4" /> },
+  { title: "Landing Page", icon: <Zap className="h-4 w-4" /> },
+  { title: "SaaS Template", icon: <Zap className="h-4 w-4" /> },
+]
+
+export default function TemplatesPage() {
 
   const [selectedTemplateId, setSelectedTemplateId] = React.useState(templates[0].id)
   const selectedTemplate = React.useMemo(
     () => templates.find((t) => t.id === selectedTemplateId) || templates[0],
-    [selectedTemplateId, templates]
+    [selectedTemplateId]
   )
 
   const groupedTemplates = React.useMemo(() => {
@@ -60,7 +61,7 @@ export default function TemplatesPage() {
       groups[template.category].push(template)
     })
     return groups
-  }, [templates])
+  }, [])
 
   return (
     <div className="flex min-h-screen flex-col bg-slate-50/50 dark:bg-slate-950/50">

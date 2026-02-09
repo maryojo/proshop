@@ -1,14 +1,17 @@
-import { Zap, Scissors, Smartphone, Palette, Globe } from "lucide-react"
 import Image from "next/image"
 import AccessibilityImage from "@/assets/accessibility.png"
 import ConversionImage from "@/assets/conversion.png"
 import ThemeImage from "@/assets/theme.png"
 
+interface FeatureIconProps {
+  className?: string
+}
+
 const features = [
   {
     title: "Conversion Optimized",
     description: "Built to convert. Every component is designed with ecommerce best practices to maximize sales and reduce cart abandonment.",
-    icon: (props: any) => (
+    icon: (props: FeatureIconProps) => (
       <Image 
         src={ConversionImage} 
         alt="Conversion" 
@@ -19,7 +22,7 @@ const features = [
   {
     title: "Accessibility",
     description: "Fully compliant with WCAG standards. Every component is tested with screen readers and keyboard navigation.",
-    icon: (props: any) => (
+    icon: (props: FeatureIconProps) => (
       <Image 
         src={AccessibilityImage} 
         alt="Accessibility" 
@@ -30,7 +33,7 @@ const features = [
   {
     title: "Easy Theming",
     description: "Using CSS variables and Tailwind theme. Change your brand's look in seconds by updating a few tokens.",
-    icon: (props: any) => (
+    icon: (props: FeatureIconProps) => (
       <Image 
         src={ThemeImage} 
         alt="Theme" 

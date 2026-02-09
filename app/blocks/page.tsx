@@ -14,89 +14,90 @@ import { ProductCardBrutalist } from "@/registry/new-york/blocks/product-grid/pr
 import { cn } from "@/lib/utils"
 import { ChevronRight, Layout, LayoutGrid, CreditCard, FormInput, MessageSquare, Monitor, Copy, Check } from "lucide-react"
 
+const niche: ProductNiche = "general"
+const products = productPresets[niche]
+const sampleProduct = products[0]
+
+const blocks = [
+  {
+    id: "product-card-brutalist",
+    title: "Brutalist Card",
+    viewTitle: "Brutalist Product Card",
+    category: "E-commerce",
+    description: "A bold, high-contrast product card with neo-brutalist styling.",
+    icon: <CreditCard className="h-4 w-4" />,
+    content: <ProductCardBrutalist product={sampleProduct} />,
+  },
+  {
+    id: "product-card",
+    title: "Modern Card",
+    viewTitle: "Modern Product Card",
+    category: "E-commerce",
+    description: "A standalone modern product card with hover actions.",
+    icon: <Layout className="h-4 w-4" />,
+    content: (
+      <div className="w-full max-w-sm">
+        <ProductCard product={sampleProduct} />
+      </div>
+    ),
+  },
+  {
+    id: "product-grid",
+    title: "Product Grid",
+    viewTitle: "Product Grid",
+    category: "E-commerce",
+    description: `A stylish responsive grid with ${niche} styling.`,
+    icon: <LayoutGrid className="h-4 w-4" />,
+    content: <ProductGrid products={products} />,
+  },
+  {
+    id: "example-with-css",
+    title: "Login Card",
+    viewTitle: "Login Card",
+    category: "Forms",
+    description: "Custom styled login interface.",
+    icon: <Monitor className="h-4 w-4" />,
+    content: <ExampleCard />,
+  },
+  {
+    id: "example-form",
+    title: "Contact Form",
+    viewTitle: "Contact Form",
+    category: "Forms",
+    description: "Professional form with validation.",
+    icon: <FormInput className="h-4 w-4" />,
+    content: <ExampleForm />,
+  },
+  {
+    id: "hello-world",
+    title: "Hello World",
+    viewTitle: "Hello World",
+    category: "Examples",
+    description: "Minimal starting block.",
+    icon: <MessageSquare className="h-4 w-4" />,
+    content: <HelloWorld />,
+  },
+]
+
+const groupedBlocks = (() => {
+  const groups: { [key: string]: typeof blocks } = {}
+  blocks.forEach((block) => {
+    if (!groups[block.category]) {
+      groups[block.category] = []
+    }
+    groups[block.category].push(block)
+  })
+  return groups
+})()
+
 export default function BlocksPage() {
-  const niche: ProductNiche = "general"
-  const products = productPresets[niche]
-  const sampleProduct = products[0]
   const [copiedId, setCopiedId] = React.useState<string | null>(null)
-
-  const blocks = [
-    {
-      id: "product-card-brutalist",
-      title: "Brutalist Card",
-      viewTitle: "Brutalist Product Card",
-      category: "E-commerce",
-      description: "A bold, high-contrast product card with neo-brutalist styling.",
-      icon: <CreditCard className="h-4 w-4" />,
-      content: <ProductCardBrutalist product={sampleProduct} />,
-    },
-    {
-      id: "product-card",
-      title: "Modern Card",
-      viewTitle: "Modern Product Card",
-      category: "E-commerce",
-      description: "A standalone modern product card with hover actions.",
-      icon: <Layout className="h-4 w-4" />,
-      content: (
-        <div className="w-full max-w-sm">
-          <ProductCard product={sampleProduct} />
-        </div>
-      ),
-    },
-    {
-      id: "product-grid",
-      title: "Product Grid",
-      viewTitle: "Product Grid",
-      category: "E-commerce",
-      description: `A stylish responsive grid with ${niche} styling.`,
-      icon: <LayoutGrid className="h-4 w-4" />,
-      content: <ProductGrid products={products} />,
-    },
-    {
-      id: "example-with-css",
-      title: "Login Card",
-      viewTitle: "Login Card",
-      category: "Forms",
-      description: "Custom styled login interface.",
-      icon: <Monitor className="h-4 w-4" />,
-      content: <ExampleCard />,
-    },
-    {
-      id: "example-form",
-      title: "Contact Form",
-      viewTitle: "Contact Form",
-      category: "Forms",
-      description: "Professional form with validation.",
-      icon: <FormInput className="h-4 w-4" />,
-      content: <ExampleForm />,
-    },
-    {
-      id: "hello-world",
-      title: "Hello World",
-      viewTitle: "Hello World",
-      category: "Examples",
-      description: "Minimal starting block.",
-      icon: <MessageSquare className="h-4 w-4" />,
-      content: <HelloWorld />,
-    },
-  ]
-
   const [selectedBlockId, setSelectedBlockId] = React.useState(blocks[0].id)
   const selectedBlock = React.useMemo(() => 
     blocks.find((b) => b.id === selectedBlockId) || blocks[0],
     [selectedBlockId, blocks]
   )
 
-  const groupedBlocks = React.useMemo(() => {
-    const groups: { [key: string]: typeof blocks } = {}
-    blocks.forEach((block) => {
-      if (!groups[block.category]) {
-        groups[block.category] = []
-      }
-      groups[block.category].push(block)
-    })
-    return groups
-  }, [blocks])
 
   const handleCopyBlock = async (blockId: string) => {
     const block = blocks.find((b) => b.id === blockId)
@@ -127,7 +128,7 @@ export default function BlocksPage() {
 
           <div className="flex flex-col lg:flex-row gap-8 items-start">
             {/* Sidebar */}
-            <aside className="w-full lg:w-64 flex-shrink-0">
+            <aside className="w-full lg:w-64 shrink-0">
               <nav className="flex flex-col gap-1 sticky top-24">
                 {Object.entries(groupedBlocks).map(([category, categoryBlocks]) => (
                   <div key={category} className="mb-6">

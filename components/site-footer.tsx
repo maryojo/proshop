@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Twitter, Instagram } from "lucide-react"
+import { Github } from "lucide-react"
 import Image from "next/image"
 import logo from "@/public/icon.svg"
 
