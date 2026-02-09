@@ -1,6 +1,8 @@
 import Link from "next/link"
-import { Sparkles, Github } from "lucide-react"
+import { Github } from "lucide-react"
 import { Button } from "@/registry/new-york/ui/button"
+import Image from "next/image"
+import logo from "@/public/icon.svg"
 
 export function SiteHeader() {
   return (
@@ -8,8 +10,8 @@ export function SiteHeader() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-              <Sparkles className="h-5 w-5" />
+            <div className="flex items-center justify-center">
+              <Image src={logo} alt="ProShop Logo" width={28} height={28} className="h-12 w-12" />
             </div>
             <span className="text-xl font-bold tracking-tight">ProShop</span>
           </Link>
@@ -27,7 +29,7 @@ export function SiteHeader() {
         </div>
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://github.com/maryojo/shadcn-shopkit" target="_blank" rel="noreferrer">
+            <a href="https://github.com/maryojo/proshop" target="_blank" rel="noreferrer">
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </a>

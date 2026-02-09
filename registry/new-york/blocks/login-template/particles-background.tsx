@@ -33,7 +33,7 @@ export function ParticlesBackground() {
         value: "#FFFEE0"
       },
       shape: {
-        type: "circle",
+        type: "circle" as const,
       },
       opacity: {
         value: 0.5,
@@ -54,24 +54,24 @@ export function ParticlesBackground() {
       move: {
         enable: true,
         speed: 0.1,
-        direction: "none",
+        direction: "none" as const,
         random: false,
         straight: false,
         outModes: {
-          default: "out"
+          default: "out" as const
         },
       }
     },
     interactivity: {
-      detectsOn: "canvas",
+      detectsOn: "canvas" as const,
       events: {
         onHover: {
           enable: false,
-          mode: "repulse"
+          mode: "repulse" as const
         },
         onClick: {
           enable: false,
-          mode: "push"
+          mode: "push" as const
         },
         resize: {
           enable: false
@@ -94,7 +94,7 @@ export function ParticlesBackground() {
     <Particles
       id="tsparticles"
       className="absolute inset-0 pointer-events-none"
-      options={options as any}
+      options={options}
     />
   )
 }
