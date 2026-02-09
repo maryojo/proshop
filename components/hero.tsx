@@ -41,12 +41,12 @@ export function Hero() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16 justify-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500">
-            <Button size="lg" variant="outline" className="rounded-2xl px-12 h-16 text-lg backdrop-blur-sm border-2 border-white/20 hover:border-white/40 font-bold text-white hover:bg-white/5" asChild>
-              <a href="https://github.com/maryojo/shadcn-shopkit" target="_blank" rel="noreferrer">
+            <Button size="lg" variant="outline" className="bg-transparent rounded-2xl px-12 h-16 text-lg backdrop-blur-sm border-2 border-white/20 hover:border-white/40 font-bold text-white hover:bg-white/5" asChild>
+              <a href="https://github.com/maryojo/proshop" target="_blank" rel="noreferrer">
                 View on GitHub
               </a>
             </Button>
-            <Button size="lg" className="rounded-2xl px-12 h-16 text-lg shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all font-bold group bg-[#e18038] hover:from-primary/90 hover:to-primary" asChild>
+            <Button size="lg" className="rounded-2xl px-12 h-16 text-lg shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all font-bold group bg-[#e18038]" asChild>
               <Link href="/blocks">
                 Browse Components <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
