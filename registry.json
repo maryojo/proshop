@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "proshop",
-  "homepage": "https://proshop.dev",
+  "homepage": "https://proshop.maryojo.me",
   "items": [
     {
       "name": "hello-world",
