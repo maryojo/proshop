@@ -4,7 +4,7 @@ import { ArrowRight, Layers, Layout, Zap } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-[#040e11] via-[#0a1520] to-[#040e11] mx-2 py-32 lg:py-48 rounded-3xl">
+    <section className="relative overflow-hidden bg-linear-to-br from-[#040e11] via-[#0a1520] to-[#040e11] mx-2 py-32 lg:py-28 rounded-3xl">
       {/* Animated gradient orbs */}
       <div className="absolute top-20 left-20 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] animate-pulse"></div>
       <div className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -17,12 +17,12 @@ export function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-5 py-2 text-sm font-semibold mb-8 backdrop-blur-sm animate-in fade-in slide-in-from-bottom-4 duration-1000 shadow-lg shadow-primary/5">
             <span className="flex h-2 w-2 rounded-full bg-primary mr-2.5 animate-ping"></span>
-            <span className="text-primary-foreground">Ecommerce & SaaS UI Blocks Built on shadcn</span>
+            <span className="text-gray-500">Ecommerce & SaaS UI Blocks Built on shadcn</span>
           </div>
           
           {/* Main Headline */}
           <h1 className="text-6xl font-black tracking-tight sm:text-7xl lg:text-8xl mb-8 leading-[1.05] text-white animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
-            Ship Your Store
+            Ship Your Storefront
             <br />
             <span className="bg-linear-to-r from-[#59d3ff] via-[#7c9aff] to-[#e37e26] bg-clip-text text-transparent relative inline-block">
               10x Faster
@@ -41,15 +41,15 @@ export function Hero() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16 justify-center animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500">
-            <Button size="lg" className="rounded-2xl px-12 h-16 text-lg shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all font-bold group bg-linear-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary" asChild>
-              <Link href="/blocks">
-                Browse Components <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
             <Button size="lg" variant="outline" className="rounded-2xl px-12 h-16 text-lg backdrop-blur-sm border-2 border-white/20 hover:border-white/40 font-bold text-white hover:bg-white/5" asChild>
               <a href="https://github.com/maryojo/shadcn-shopkit" target="_blank" rel="noreferrer">
                 View on GitHub
               </a>
+            </Button>
+            <Button size="lg" className="rounded-2xl px-12 h-16 text-lg shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-all font-bold group bg-[#e18038] hover:from-primary/90 hover:to-primary" asChild>
+              <Link href="/blocks">
+                Browse Components <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
           </div>
 

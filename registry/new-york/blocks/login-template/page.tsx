@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/registry/new-york/ui/input"
 import { Label } from "@/registry/new-york/ui/label"
 import { ParticlesBackground } from "./particles-background"
-import logo from "@/public/logo_cloudsync.png"
+import logo from "@/public/icon.svg"
 import Image from "next/image"
 
 export default function LoginPage() {
